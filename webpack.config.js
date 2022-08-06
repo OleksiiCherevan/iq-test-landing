@@ -8,25 +8,35 @@ module.exports = {
         path: path.resolve(__dirname, "dist/"),
     },
     module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [
-                {
-                    loader: 'style-loader',
-                },
-                {
-                    loader: 'css-loader',
-                    options: {
-                        sourceMap: true,
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: "style-loader",
                     },
-                },
-                {
-                    loader: 'sass-loader',
-                    options: {
-                        sourceMap: true,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                        },
                     },
-                },
-            ],
-        }],
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader"
+                    }
+                ]
+            }
+        ],
     },
 };

