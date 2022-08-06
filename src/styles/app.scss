@@ -107,9 +107,7 @@ body {
 
 .modal {
     
-    animation-name: fadeIn;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
+  
     
     position: absolute;
     top: 0;
@@ -123,12 +121,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    &_hide {
+        opacity: 0;
+    }
+    &_open {
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
     &_close {
         animation-name: fadeOut;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
     }
     &__backdrop {
         bottom: 0;

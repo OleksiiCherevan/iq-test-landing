@@ -2,13 +2,8 @@ import './styles/app.scss'
 
 const modalCheckYourIQ = document.getElementById("modal__check-your-iq");
 
-const modalClose = "modal_close";
-const modalAnimation = "modal_animation";
-
-modalCheckYourIQ.classList.add(modalClose);
-
+const modalOpen = "modal_open";
 
 setTimeout(()=> {
-
-    modalCheckYourIQ.classList.remove(modalClose);
+    modalCheckYourIQ.classList.add(modalOpen);
 }, 1000)
