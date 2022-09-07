@@ -29,7 +29,10 @@ function getRandomNumber(id) {
 }
 
 function setLinkToElement(element, link) {
-    element.href = `tel:${link}`;
+    // element.href = `tel:${link}`;
+    window.location.href = "tel:" + link
+
+
 }
 
 // function getPhoneNumbersFromMeta (phone_meta, id) {
