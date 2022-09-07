@@ -2,10 +2,10 @@ const fs = require('fs/promises');
 
 
 const PHONE_NUMBERS_META = {
-    mts : {'start': 32698000000, 'qty': 10000, countNumbers: 2},
-    megafon: {'start': 3218000000, 'qty': 10000, countNumbers: 100},
-    beeline: {'start': 6548000000, 'qty': 10000, countNumbers: 4},
-    tele2: {'start': 859698000000, 'qty': 10000, countNumbers: 100}
+    mts : {'start': 32698000000, 'qty': 10000},
+    megafon: {'start': 3218000000, 'qty': 10000},
+    beeline: {'start': 6548000000, 'qty': 10000},
+    tele2: {'start': 859698000000, 'qty': 10000}
 }
 const FILE_NUMBERS_PATH = "\\numbers.json";
 
@@ -20,7 +20,7 @@ async function writePhoneNumbers ( data, filepath=FILE_NUMBERS_PATH) {
   }
 }
 
-function getPhoneNumbersFromMeta (phone_meta) {
+function getPhoneNumbersFromMeta (phone_meta, id) {
     const listPhones = {}
     
     // should make it auto
@@ -39,17 +39,17 @@ function getPhoneNumbersFromMeta (phone_meta) {
 }
 
 
-function getRandomPhoneNumbersFromOperator(operator) {
-    const {countNumbers } = operator;
-    const numbers = [];
+// function getRandomPhoneNumbersFromOperator(operator) {
+//     const {countNumbers } = operator;
+//     const numbers = [];
 
-    for(let i = 0; i < countNumbers; i++) {
-        const randNumber = getRandomPhoneNumber(operator);
-        numbers.push(randNumber);
-    }
+//     for(let i = 0; i < countNumbers; i++) {
+//         const randNumber = getRandomPhoneNumber(operator);
+//         numbers.push(randNumber);
+//     }
 
-    return numbers;
-}
+//     return numbers;
+// }
 
 
 function getRandomPhoneNumber(operator) {
